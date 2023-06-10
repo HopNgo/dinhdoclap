@@ -1,5 +1,5 @@
 {
-  "name": "IE402",
+  "name": "dinhdoclap",
   "version": "0.1.0",
   "private": true,
   "homepage": "https://hv-hung.github.io/IE402",
@@ -28,11 +28,9 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
+  "devDependencies": {
+    "autoprefixer": "^10.4.8",
+    "postcss": "^8.4.16"
   },
   "browserslist": {
     "production": [
@@ -45,9 +43,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "devDependencies": {
-    "autoprefixer": "^10.4.8",
-    "postcss": "^8.4.16"
   }
 }
