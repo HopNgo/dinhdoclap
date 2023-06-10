@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;700&display=swap");
+
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+* {
+  font-family: "Poppins", sans-serif;
+}
+footer {
+  background-image: url("/src/asset/images/footer.png");
+}
