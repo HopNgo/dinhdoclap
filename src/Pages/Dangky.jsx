@@ -13,7 +13,7 @@ export const Dangky = () => {
 
   return (
     <div className="relative">
-      <div className="dangky">
+      <div className="dangky h-screen">
         <img
           className="w-full h-full object-cover object-center opacity-50"
           src={dinhDocLapImg16}
@@ -21,7 +21,7 @@ export const Dangky = () => {
         />
       </div>
       <Space
-        className=" w-screen h-screen justify-center items-center absolute left-0 top-0"
+        className=" w-screen h-screen justify-center items-center absolute left-0 top-0 flex items"
         align="center"
       >
         <form onSubmit={handleSubmit} className="z-50 text-center">
@@ -32,10 +32,12 @@ export const Dangky = () => {
             className="my-10 px-10 py-[80px] rounded bg-[#E4E5D6] shadow-2xl text-start"
           >
             <Space align="center">
-              <h3 className="text-[50px] font-bold text-blue-500">Đăng Ký</h3>
+              <h3 className="text-[50px] text-center font-bold text-blue-500">
+                Đăng Ký
+              </h3>
             </Space>
 
-            <div>
+            <div className="mb-2">
               <p className="text-[18px] rounded">Tên tài khoản</p>
               <Input
                 name="email"
@@ -45,18 +47,18 @@ export const Dangky = () => {
                 required
               />
             </div>
-            <div>
-              <p className="text-[18px]">Mật khẩu</p>
+            <div className="mb-5">
+              <p className="text-[18px] mb-5">Mật khẩu</p>
               <Input.Password
-                className="w-[556px] h-[44px] rounded border border-[#CED0C2] p-2"
+                className="w-[556px] h-[44px] rounded border border-[#CED0C2] p-2 !bg-white"
                 placeholder="Nhập mật khẩu"
                 required
               />
             </div>
-            <div>
-              <p className="text-[18px]">Nhập lại mật khẩu</p>
+            <div className="mb-5">
+              <p className="text-[18px] mb-5">Nhập lại mật khẩu</p>
               <Input.Password
-                className="w-[556px] h-[44px] rounded border border-[#CED0C2] p-2"
+                className="w-[556px] h-[44px] rounded border border-[#CED0C2] p-2 !bg-white"
                 placeholder="Nhập mật lại khẩu"
                 required
               />
@@ -68,7 +70,7 @@ export const Dangky = () => {
             >
               Đăng ký
             </button>
-            <div className="flex justify-between w-[556px]">
+            <div className="flex justify-between w-[556px] mt-5">
               <p
                 onClick={() => navigate("/")}
                 className="cursor-pointer text-[22px] hover:underline"

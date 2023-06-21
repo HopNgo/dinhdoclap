@@ -12,8 +12,8 @@ export const DangNhap = () => {
   };
 
   return (
-    <div className="relative text-gray-900">
-      <div className="dangky">
+    <div className="relative text-gray-900 h-[100vh] flex items-center justify-center">
+      <div className="dangky h-[100vh]">
         <img
           className="w-full h-full object-cover object-center opacity-50"
           src={dinhDocLapImg16}
@@ -21,10 +21,13 @@ export const DangNhap = () => {
         />
       </div>
       <Space
-        className=" w-screen h-screen justify-center items-center absolute left-0 top-0"
+        className=" w-screen h-screen justify-center items-center absolute left-0 top-0 flex items"
         align="center"
       >
-        <form onSubmit={handleSubmit} className="z-50 text-center">
+        <form
+          onSubmit={handleSubmit}
+          className="z-50 text-center flex items-center"
+        >
           <Space
             direction="vertical"
             size={23}
@@ -32,11 +35,13 @@ export const DangNhap = () => {
             className="my-10 px-10 py-[80px] rounded bg-[#E4E5D6] shadow-2xl text-start"
           >
             <Space align="center">
-              <h3 className="text-[50px] font-bold text-blue-500">Đăng nhập</h3>
+              <h3 className="text-[50px] font-bold text-blue-500 text-center">
+                Đăng nhập
+              </h3>
             </Space>
 
-            <div>
-              <p className="text-[18px] rounded">Tên tài khoản</p>
+            <div className="mb-5">
+              <p className="text-[18px] rounded mb-2">Tên tài khoản</p>
               <Input
                 name="email"
                 className="w-[556px] h-[44px] border border-[#CED0C2] p-2"
@@ -46,9 +51,9 @@ export const DangNhap = () => {
               />
             </div>
             <div>
-              <p className="text-[18px]">Mật khẩu</p>
+              <p className="text-[18px] mb-3">Mật khẩu</p>
               <Input.Password
-                className="w-[556px] h-[44px] rounded border border-[#CED0C2] p-2"
+                className="w-[556px] h-[44px] rounded border border-[#CED0C2] p-2 !bg-white"
                 placeholder="Nhập mật khẩu"
                 required
               />
@@ -60,7 +65,7 @@ export const DangNhap = () => {
             >
               Đăng nhập
             </button>
-            <div className="flex justify-between w-[556px]">
+            <div className="flex justify-between w-[556px] mt-5">
               <p
                 onClick={() => navigate("/")}
                 className="cursor-pointer text-[22px] hover:underline"

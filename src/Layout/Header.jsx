@@ -36,15 +36,15 @@ export const Header = () => {
     {
       label: (
         <Link
-          to={"/lichsu"}
+          to={"/lienhe"}
           className={`items-center  text-white text-[20px] ${
-            keyMenu === "lichsu" ? " font-bold" : " font-medium"
+            keyMenu === "lienhe" ? " font-bold" : " font-medium"
           }`}
         >
-          Lịch Sử
+          Liên hệ
         </Link>
       ),
-      key: "lichsu",
+      key: "lienhe",
     },
     {
       label: (
@@ -62,15 +62,15 @@ export const Header = () => {
     {
       label: (
         <Link
-          to={"/lienhe"}
+          to={"/lichsu"}
           className={`items-center  text-white text-[20px] ${
-            keyMenu === "lienhe" ? " font-bold " : " font-medium"
+            keyMenu === "lichsu" ? " font-bold" : " font-medium"
           }`}
         >
-          Liên hệ
+          Lịch Sử
         </Link>
       ),
-      key: "lienhe",
+      key: "lichsu",
     },
   ];
   const email = localStorage.getItem("email");
@@ -118,6 +118,38 @@ export const Header = () => {
             );
           })}
         </Space>
+        <div>
+          {email ? (
+            <div>
+              <h3 className="items-center space-x-1 text-white font-bold text-[20px] cursor-pointer min-w-[224px]">
+                <div className="flex gap-5 items-center">
+                  <div className="w-[50px]">
+                    <Avatar src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Flag_of_Vietnam.svg/1920px-Flag_of_Vietnam.svg.png" />
+                  </div>
+                  <p>{email}</p>
+                  <div
+                    className="bg-blue-800 py-3 px-5 rounded-[10px] text-base"
+                    onClick={() => logout.cb()}
+                  >
+                    Đăng xuất
+                  </div>
+                </div>
+              </h3>
+            </div>
+          ) : (
+            <Link
+              to={"/dangnhap"}
+              className="items-center space-x-1 text-Whtie font-bold text-[20px] cursor-pointer"
+            >
+              <Button
+                type="primary"
+                className="bg-[#1063B8] text-[20px] h-10  px-3 rounded text-white hover:opacity-80"
+              >
+                Đăng nhập
+              </Button>
+            </Link>
+          )}
+        </div>
       </div>
     </Layout.Header>
   );
