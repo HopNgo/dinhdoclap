@@ -29,7 +29,7 @@ export const LienHe = () => {
               <PhoneFilled className="text-[34px]" />
             </Space>
 
-            <div>
+            <div className="mb-5 mt-5">
               <p className="text-[18px] rounded">Họ và tên</p>
               <input
                 className="w-[556px] h-[44px] border border-[#CED0C2] p-2"
@@ -38,25 +38,25 @@ export const LienHe = () => {
                 required
               />
             </div>
-            <div>
+            <div className="mb-5">
               <p className="text-[18px]">Email</p>
               <input
                 className="w-[556px] h-[44px] rounded border border-[#CED0C2] p-2"
-                placeholder="Vui lòng nhập số điện thoại..."
+                placeholder="Vui lòng nhập số email..."
                 type="email"
                 required
               />
             </div>
-            <div>
+            <div className="mb-5">
               <p className="text-[18px]">Số điện thoại</p>
               <input
                 className="w-[556px] h-[44px] rounded border border-[#CED0C2] p-2"
-                placeholder="Vui lòng nhập họ tên..."
+                placeholder="Vui lòng nhập số điện thoại..."
                 type="tel"
                 required
               />
             </div>
-            <div>
+            <div className="mb-5">
               <p className="text-[18px]">Nội dung</p>
               <textarea
                 className="w-[556px]  rounded border border-[#CED0C2] p-2"
